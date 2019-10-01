@@ -1,1 +1,43 @@
-
+<?php
+    class SpeSkillTest {
+    
+        public static function NacissisticNumber($num) {
+            $getinput = str_split($num);
+            $ctrnum = count($getinput)
+            $result = 0;
+            
+            foreach ($getinput as $value) {
+              $result = $result + pow($value, $ctrnum);
+            }
+            
+            if(strval($result) == $num ){
+              return true;
+            }else{
+              return false;
+            }
+         }
+         
+         public static function ParityOutliner(array $numarr) {
+            $oddnum = array;
+            $evennum = array;
+            
+            foreach ($numarr as $value) {
+              if($value % 2 == 0){
+                     $oddnum =  $value;
+              }elseif(value % 2 != 0){
+                     $evennum =  $value;
+              }
+            }
+            
+            if(count($oddnum) > 0 && count($oddnum) < count($evennum) ){
+              echo $oddnum . " (the only odd number)";
+            }elseif(count($evennum) > 0 && count($evennum) < count($oddnum)){
+              echo $even . " (the only even number)";
+            }elseif(count($oddnum) > 0 && count($evennum) <= 0){
+              echo "false (all odd integer, no outlier)";
+            }else{
+              echo "false (all even integer, no outlier)";
+            }
+         }
+    }
+?>
